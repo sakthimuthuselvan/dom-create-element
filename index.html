@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body1{
+            display: flex;
+            justify-content: center;
+          
+        }
+        .body1 .overall{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(190, 190, 190);
+            align-items: center;
+           
+        }
+        .body1  h1{
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+            background-color: gray; 
+            
+        }
+        .body1 p{
+            text-align: center;
+            color: white;
+        }
+        .body1 .image{
+            width: 50%;
+           
+          
+        }
+        .body1 .image img{
+            width: 100%;
+        }
+        .body1 .btns {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .body1 .btns button{
+            width: 200px;
+            height: 30px;
+            background-color: rgb(65, 112, 182);
+            border: none;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+           
+        }
+                /* DOM STYLES */
+        .body{
+            display: flex;
+            justify-content: center;
+    
+            margin-top: 30px;
+          
+        }
+        .domoverall{
+            width: 50%;
+            background-color: rgb(180, 189, 197);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .h1{
+            color: white;
+            background-color:gray;
+            text-align: center;
+            display: inline-block;
+        }
+        .p{
+            color: white;
+            text-align: center;
+        }
+        .image{
+            width: 50%;
+       
+        }
+        .img{
+            width: 100%;
+        }
+        .btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .btns button{
+            background-color: rgb(13, 98, 155);
+            width: 200px;
+            height: 30px;
+            border: none;
+            color: white;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="body1">
+    <div class="overall">
+        <h1>DOM METHOD</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro possimus ducimus consequuntur, molestiae iusto quod quos est dolore consectetur.</p>
+        <div class="image">
+            <img src="./labrador-puppy-royalty-free-image-1626252338.jpg" alt="">
+        </div>
+        <div class="btns">
+            <button>get it</button>
+            <button>wikipidia</button>
+        </div>
+    </div>
+</div>
+    <div class="body"></div>
+    <button class="dom">click here</button>
+
+
+    <script>
+        let body=document.getElementsByClassName("body")[0]
+        let dom=document.getElementsByClassName("dom")[0]
+
+       dom.addEventListener("click",()=>{
+       
+        let overall=document.createElement("div")
+        overall.className="domoverall"
+        body.append(overall)
+
+        let h1=document.createElement("h1")
+        h1.innerText="DOM METHOD"
+        h1.className="h1"
+        overall.append(h1)
+
+        let p=document.createElement("p")
+            p.className="p"
+        p.innerText="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro possimus ducimus consequuntur, molestiae iusto quod quos est dolore consectetur"
+        overall.append(p)
+
+        let image=document.createElement("div")
+            image.className="image"
+        overall.append(image)
+       
+
+        let img=document.createElement("img")
+        img.className="img"
+        img.src="./labrador-puppy-royalty-free-image-1626252338.jpg"
+            image.append(img)
+         
+         let btns=document.createElement("div")
+         btns.className="btns"
+         overall.append(btns)
+
+         let btn=document.createElement("button")
+              btn.innerText="get it"  
+           
+         btns.append(btn)
+         let btn1=document.createElement("button")
+              btn1.innerText="wikipedia"
+         btns.append(btn1)
+            
+       })
+    </script>
+</body>
+</html>
